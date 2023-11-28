@@ -1,18 +1,32 @@
 pipeline {
-  agent any
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from the GitHub repository
+                checkout scm
+            }
+        }
 
-  stages {
-    stage('Test') {
-      steps {
-        sh './mvnw test'
-      }
+        stage('Build') {
+            steps {
+                // Build the Java project using Maven
+                sh 'mvn clean install'
+            }
+        }
 
-      post {
-        always {
-          junit '**/target/surefire-reports/TEST-*.xml'
-      }
-      }
+        stage('Test') {
+            steps {
+                // Run JUnit tests
+                sh 'mvn test'
+            }
+
+            post {
+                // Publish JUnit test results
+                always {
+                    junit 'target/surefire-reports/**/*.xml'
+                }
+            }
+        }
     }
-  }
-}
-        
+} 
