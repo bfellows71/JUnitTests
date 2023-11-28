@@ -24,7 +24,7 @@ pipeline {
             post {
                 // Publish JUnit test results
                 always {
-                    junit 'target/surefire-reports/**/*.xml'
+                    junit 'tests/results/*.xml'
                 }
             }
         }
