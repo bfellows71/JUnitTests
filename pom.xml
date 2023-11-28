@@ -29,6 +29,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.2.2</version>
             <configuration>
+                <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
                 <testFailureIgnore>true</testFailureIgnore>
                 <forkCount>0</forkCount>
                 <reuseForks>true</reuseForks>
