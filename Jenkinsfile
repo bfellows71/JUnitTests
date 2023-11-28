@@ -18,7 +18,7 @@ pipeline {
         stage('Test') {
             steps {
                 // Run JUnit tests
-                sh 'mvn clean test'
+                sh './mvnw clean test'
                 
                 // Print contents of the workspace for debugging
                 script {
