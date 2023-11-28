@@ -15,6 +15,11 @@ pipeline {
             }
         }
 
+        script {
+    echo "Contents of target directory:"
+    sh 'ls -R target'
+}
+
         stage('Test') {
             steps {
                 // Run JUnit tests
