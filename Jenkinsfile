@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // validate
-                    sh 'mvn clean validate'
+                    sh 'mvn -U clean validate'
                     
                     // Use a Java code linter (e.g., Checkstyle)
                     sh 'mvn checkstyle:check'
