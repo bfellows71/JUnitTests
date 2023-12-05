@@ -55,9 +55,9 @@
 
             <!-- FindBugs Plugin -->
             <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>findbugs-maven-plugin</artifactId>
-        <version>3.0.6-SNAPSHOT</version>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>findbugs-maven-plugin</artifactId>
+    <version>3.0.5</version>
                 <executions>
                     <execution>
                         <goals>
@@ -69,9 +69,9 @@
 
             <!-- JaCoCo Maven Plugin -->
             <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.7</version> <!-- Use the latest version available -->
+  <groupId>org.jacoco</groupId>
+  <artifactId>jacoco-maven-plugin</artifactId>
+  <version>0.8.12-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <goals>
