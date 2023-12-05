@@ -5,6 +5,9 @@ pipeline {
         stage('Linting and Static Analysis') {
             steps {
                 script {
+                    // validate
+                    sh 'mvn clean validate'
+                    
                     // Use a Java code linter (e.g., Checkstyle)
                     sh 'mvn checkstyle:check'
 
@@ -49,12 +52,6 @@ pipeline {
                     sh 'mvn sonar:sonar'
                 }
             }
-        }
-    }
-
-    post {
-        always {
-            sh 'mvn clean validate'
         }
     }
 }
