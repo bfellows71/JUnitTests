@@ -6,10 +6,10 @@ pipeline {
             steps {
                 script {
                     // Use a Java code linter (e.g., Checkstyle)
-                    sh 'mvn checkstyle:checkstyle'
+                    sh 'mvn checkstyle:check'
 
                     // Use a static analysis tool (e.g., FindBugs)
-                    sh 'mvn findbugs:findbugs'
+                    sh 'mvn findbugs:check'
                 }
             }
         }
