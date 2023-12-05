@@ -55,9 +55,9 @@
 
             <!-- FindBugs Plugin -->
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>3.0.7</version>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>3.0.6-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <goals>
