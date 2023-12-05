@@ -50,10 +50,11 @@ pipeline {
                 }
             }
         }
-            post {
-        always {
-            mvn clean validate
-        }
     }
+
+    post {
+        always {
+            sh 'mvn clean validate'
+        }
     }
 }
